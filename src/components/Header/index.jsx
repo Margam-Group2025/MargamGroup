@@ -49,12 +49,12 @@ const Header = () => {
             to="/blog"
             className="relative group text-gray-700 font-medium hover:text-green-700 transition-colors duration-300"
           >
-            Career
+            Our Team
             <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
 
           <Link
-            to="/contact"
+            to="/connect"
             className="relative group text-gray-700 font-medium hover:text-green-700 transition-colors duration-300"
           >
             Connect Us
