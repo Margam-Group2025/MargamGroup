@@ -38,15 +38,7 @@ const Header = () => {
           </Link>
 
           <Link
-            to="/services"
-            className="relative group text-gray-700 font-medium hover:text-green-700 transition-colors duration-300"
-          >
-            Services
-            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-
-          <Link
-            to="/blog"
+            to="/our-team"
             className="relative group text-gray-700 font-medium hover:text-green-700 transition-colors duration-300"
           >
             Our Team
@@ -58,6 +50,14 @@ const Header = () => {
             className="relative group text-gray-700 font-medium hover:text-green-700 transition-colors duration-300"
           >
             Connect Us
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+
+            <Link
+            to="/blog"
+            className="relative group text-gray-700 font-medium hover:text-green-700 transition-colors duration-300"
+          >
+            Blog
             <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </nav>
@@ -76,10 +76,10 @@ const Header = () => {
         <div className="md:hidden bg-white shadow-md px-6 py-4 space-y-4">
           <Link to="/" className="block text-gray-700 font-medium hover:text-green-800 transition-colors duration-300">Home</Link>
           <Link to="/about" className="block text-gray-700 font-medium hover:text-green-800 transition-colors duration-300">About</Link>
-          <Link to="/business" className="block text-gray-700 font-medium hover:text-green-800 transition-colors duration-300">Business</Link>
-          <Link to="/services" className="block text-gray-700 font-medium hover:text-green-800 transition-colors duration-300">Services</Link>
+          <Link to="/business" className="block text-gray-700 font-medium hover:text-green-800 transition-colors duration-300">Business</Link>   
+          <Link to="/our-team" className="block text-gray-700 font-medium hover:text-green-800 transition-colors duration-300">Our Team</Link>
+          <Link to="/contact" className="block text-gray-700 font-medium hover:text-green-800 transition-colors duration-300">Connect Us</Link>
           <Link to="/blog" className="block text-gray-700 font-medium hover:text-green-800 transition-colors duration-300">Blog</Link>
-          <Link to="/contact" className="block text-gray-700 font-medium hover:text-green-800 transition-colors duration-300">Contact</Link>
         </div>
       )}
     </header>
