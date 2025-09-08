@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About';
 import Business from './components/Business';
+import Team from './components/Team';
+import Footer from './components/Footer';
 function App() {
 
   return (
@@ -12,6 +14,8 @@ function App() {
       <Hero/>
       <About/>
       <Business/>
+      <Team/>
+      <Footer/>
       <Routes>
         <Route path="/" />
 
