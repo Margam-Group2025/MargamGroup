@@ -23,10 +23,10 @@ const About = () => {
         >
           <div className='lg:w-[60%] w-full flex flex-col justify-center items-start gap-4'>
             <h1 className='text-green-600 uppercase text-md'>Who We Are</h1>
-            <h1 className='text-black lg-text-[45px] text-[30px] capitalize leading-[1.2em]'>
-              MARGAM GROUP (The Way)
+            <h1 className='text-black lg-text-[45px] text-[30px] capitalize leading-[1.2em] font-[20px]'>
+              MARGAM GROUP 
               <br />
-              <span className='text-neutral-500 font-extralight'>a popular name in odisha</span>
+              <span className='text-neutral-500 font-extralight'>_____The Way_____</span>
             </h1>
             <p className='text-gray-500 text-md'>
               Our group unites real estate, construction, interiors, e-commerce, education, textiles, and materials, 
