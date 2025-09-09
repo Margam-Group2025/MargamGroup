@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Header = () => {
+  useEffect(() => {
+         AOS.init({
+           duration: 800,
+           delay: 200,
+           once: false,
+         });
+       }, []);
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+    <header className="w-full bg-white shadow-md fixed top-0 left-0 z-50"
+     data-aos="fade-down">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <div className="text-2xl font-bold text-gray-800">
           MyLogo{' '}
