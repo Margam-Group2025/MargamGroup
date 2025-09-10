@@ -1,14 +1,15 @@
-import { react,useEffect,useState } from 'react'
-import { Routes, Route, useLocation } from "react-router-dom";
-import Header from './components/Header'
-import About from './components/About';
-import Business from './components/Business';
-import Team from './components/Team';
-import Footer from './components/Footer';
-import Connect from './components/Connect';
-import Hero from './components/Hero'
-import Blog from './components/Blog';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import About from "./components/About";
+import Business from "./components/Business";
+import Team from "./components/Team";
+import Footer from "./components/Footer";
+import Connect from "./components/Connect";
+import Hero from "./components/Hero";
+import Blog from "./components/Blog";
 import toast, { Toaster } from "react-hot-toast";
+
 function HomePage() {
   return (
     <>
@@ -44,7 +45,7 @@ function App() {
 
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
