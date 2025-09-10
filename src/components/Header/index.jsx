@@ -2,17 +2,18 @@ import React, { useEffect, useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link as ScrollLink } from "react-scroll";
-import { Link, Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menuLinks = [
-     { name: "Home", to: "home", type: "scroll" },
+    { name: "Home", to: "home", type: "scroll" },
     { name: "About", to: "about", type: "scroll" },
     { name: "Business", to: "business", type: "scroll" },
     { name: "Team", to: "team", type: "scroll" },
     { name: "Connect", to: "connect", type: "scroll" },
-    { name: "Blog", to: "/blog", type: "route" },
+    { name: "Blog", to: "/blog", type: "route" }, // separate page
   ];
 
   useEffect(() => {
@@ -27,7 +28,7 @@ const Header = () => {
   }, [menuOpen]);
 
   return (
-   <header className="bg-black py-4 lg:px-[80px] px-7 fixed top-0 left-0 w-full z-50">
+    <header className="bg-black py-4 lg:px-[80px] px-7 fixed top-0 left-0 w-full z-50">
       <div className="flex justify-between items-center">
         {/* logo */}
         <div className="text-themegreen font-bold lg:text-4xl text-3xl uppercase">
@@ -45,21 +46,30 @@ const Header = () => {
         {/* desktop menu */}
         <nav className="hidden md:block">
           <ul className="flex space-x-10 text-lg text-white">
-            {menuLinks.map((link, index) => (
-              <li key={link.to}>
-                <Link
-                  to={link.to}
-                  smooth={true}
-                  duration={500}
-                  offset={-80} // adjust for header height
-                  className={`cursor-pointer ${
-                    link.name === "Home"
-                      ? "text-themegreen"
-                      : "hover:text-themegreen transition-colors"
-                  }`}
-                >
-                  {link.name}
-                </Link>
+            {menuLinks.map((link) => (
+              <li key={link.name}>
+                {link.type === "scroll" ? (
+                  <ScrollLink
+                    to={link.to}
+                    smooth={true}
+                    duration={500}
+                    offset={-80} // adjust for header height
+                    className={`cursor-pointer ${
+                      link.name === "Home"
+                        ? "text-themegreen"
+                        : "hover:text-themegreen transition-colors"
+                    }`}
+                  >
+                    {link.name}
+                  </ScrollLink>
+                ) : (
+                  <RouterLink
+                    to={link.to}
+                    className="cursor-pointer hover:text-themegreen transition-colors"
+                  >
+                    {link.name}
+                  </RouterLink>
+                )}
               </li>
             ))}
           </ul>
@@ -77,22 +87,32 @@ const Header = () => {
           onClick={() => setMenuOpen(false)}
         />
         <ul className="flex flex-col space-y-6 text-2xl text-center">
-          {menuLinks.map((link, index) => (
-            <li key={link.to}>
-              <Link
-                to={link.to}
-                smooth={true}
-                duration={500}
-                offset={-80}
-                onClick={() => setMenuOpen(false)}
-                className={`cursor-pointer ${
-                  link.name === "Home"
-                    ? "text-themegreen"
-                    : "hover:text-themegreen transition-colors"
-                }`}
-              >
-                {link.name}
-              </Link>
+          {menuLinks.map((link) => (
+            <li key={link.name}>
+              {link.type === "scroll" ? (
+                <ScrollLink
+                  to={link.to}
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  onClick={() => setMenuOpen(false)}
+                  className={`cursor-pointer ${
+                    link.name === "Home"
+                      ? "text-themegreen"
+                      : "hover:text-themegreen transition-colors"
+                  }`}
+                >
+                  {link.name}
+                </ScrollLink>
+              ) : (
+                <RouterLink
+                  to={link.to}
+                  onClick={() => setMenuOpen(false)}
+                  className="cursor-pointer hover:text-themegreen transition-colors"
+                >
+                  {link.name}
+                </RouterLink>
+              )}
             </li>
           ))}
         </ul>
