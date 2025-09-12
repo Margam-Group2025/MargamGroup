@@ -13,6 +13,7 @@ import toast, { Toaster } from "react-hot-toast";
 function HomePage() {
   return (
     <>
+    <div className="overflow-y-hidden">
       <section id="home">
         <Hero />
       </section>
@@ -28,6 +29,7 @@ function HomePage() {
       <section id="connect">
         <Connect />
       </section>
+      </div>
     </>
   );
 }
