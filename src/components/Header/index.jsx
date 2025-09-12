@@ -25,7 +25,7 @@ const Header = () => {
     return () => {
       document.body.classList.remove("overflow-hidden");
     };
-  }, [menuOpen]);
+  }, [menuOpen]);                   
 
   return (
     <header className="bg-black py-4 lg:px-[80px] px-7 fixed top-0 left-0 w-full z-50">
@@ -77,46 +77,49 @@ const Header = () => {
       </div>
 
       {/* mobile menu */}
-      <div
-        className={`fixed top-0 left-0 h-full w-full bg-black text-white transform
-        ${menuOpen ? "translate-x-0" : "translate-x-full"}
-        transition-transform duration-300 ease-in-out z-40 flex items-center justify-center`}
-      >
-        <IoCloseSharp
-          className="fixed top-3 right-6 text-3xl cursor-pointer"
-          onClick={() => setMenuOpen(false)}
-        />
-        <ul className="flex flex-col space-y-6 text-2xl text-center">
-          {menuLinks.map((link) => (
-            <li key={link.name}>
-              {link.type === "scroll" ? (
-                <ScrollLink
-                  to={link.to}
-                  smooth={true}
-                  duration={500}
-                  offset={-80}
-                  onClick={() => setMenuOpen(false)}
-                  className={`cursor-pointer ${
-                    link.name === "Home"
-                      ? "text-themegreen"
-                      : "hover:text-themegreen transition-colors"
-                  }`}
-                >
-                  {link.name}
-                </ScrollLink>
-              ) : (
-                <RouterLink
-                  to={link.to}
-                  onClick={() => setMenuOpen(false)}
-                  className="cursor-pointer hover:text-themegreen transition-colors"
-                >
-                  {link.name}
-                </RouterLink>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
+     <div
+  className={`fixed top-0 left-0 h-full w-64 bg-black text-white transform
+  ${menuOpen ? "translate-x-0" : "-translate-x-full"}
+  transition-transform duration-300 ease-in-out z-30 flex flex-col`}
+>
+  {/* Close Button */}
+  <IoCloseSharp
+    className="absolute top-4 right-4 text-3xl cursor-pointer"
+    onClick={() => setMenuOpen(false)}
+  />
+
+  {/* Menu Items */}
+  <ul className="mt-16 flex flex-col space-y-6 text-xl px-6">
+    {menuLinks.map((link) => (
+      <li key={link.name}>
+        {link.type === "scroll" ? (
+          <ScrollLink
+            to={link.to}
+            smooth={true}
+            duration={500}
+            offset={-80}
+            onClick={() => setMenuOpen(false)}
+            className={`block cursor-pointer ${
+              link.name === "Home"
+                ? "text-themegreen"
+                : "hover:text-themegreen transition-colors"
+            }`}
+          >
+            {link.name}
+          </ScrollLink>
+        ) : (
+          <RouterLink
+            to={link.to}
+            onClick={() => setMenuOpen(false)}
+            className="block cursor-pointer hover:text-themegreen transition-colors"
+          >
+            {link.name}
+          </RouterLink>
+        )}
+      </li>
+    ))}
+  </ul>
+</div>
     </header>
   );
 };
