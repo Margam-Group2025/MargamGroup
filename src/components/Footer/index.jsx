@@ -17,10 +17,10 @@ export default function Footer() {
         <div>
           <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
           <ul className="space-y-3 text-sm">
-            <li><a href="#" className="hover:text-white">About Us</a></li>
-            <li><a href="#" className="hover:text-white">Our Business</a></li>
-            <li><a href="#" className="hover:text-white">Our Team</a></li>
-            <li><a href="#" className="hover:text-white">Connect Us</a></li>
+            <li><a href="/about" className="hover:text-green-600 ">About Us</a></li>
+            <li><a href="/business" className="hover:text-green-600">Our Business</a></li>
+            <li><a href="/team" className="hover:text-green-600">Our Team</a></li>
+            <li><a href="/connect" className="hover:text-green-600">Connect Us</a></li>
           </ul>
         </div>
 
@@ -29,8 +29,8 @@ export default function Footer() {
           <h2 className="text-xl font-semibold mb-4">Contact</h2>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2"><MapPin size={18}/> Margam Group, Bhubaneswar, India</li>
-            <li className="flex items-center gap-2"><Phone size={18}/> +1 234 567 890</li>
-            <li className="flex items-center gap-2"><Mail size={18}/> margamgroup.com</li>
+            <li className="flex items-center gap-2"><Phone size={18}/>+91 7749950999</li>
+            <li className="flex items-center gap-2"><Mail size={18}/> margamgroup2025@gmail.com</li>
           </ul>
         </div>
 
