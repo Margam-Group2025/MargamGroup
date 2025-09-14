@@ -80,8 +80,7 @@ const Header = () => {
      <div
   className={`fixed top-0 left-0 h-full w-64 bg-black text-white transform
   ${menuOpen ? "translate-x-0" : "-translate-x-full"}
-  transition-transform duration-300 ease-in-out z-30 flex flex-col`}
->
+  transition-transform duration-300 ease-in-out z-30 flex flex-col`}>
   {/* Close Button */}
   <IoCloseSharp
     className="absolute top-4 right-4 text-3xl cursor-pointer"
@@ -119,7 +118,7 @@ const Header = () => {
       </li>
     ))}
   </ul>
-</div>
+</div>                                          
     </header>
   );
 };
