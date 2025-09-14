@@ -29,10 +29,9 @@ const About = () => {
               <span className='text-neutral-500 font-extralight'>_____The Way_____</span>
             </h1>
             <p className='text-gray-500 text-md'>
-              Our group unites real estate, construction, interiors, e-commerce, education, textiles, and materials, 
-              creating trusted solutions that inspire growth, elevate lifestyles,
-              and shape a sustainable future with excellence and innovation.
-            </p>
+             Margam Group is a multi-venture enterprise shaping the future of real estate, construction, education, 
+             and business solutions. With a focus on trust, quality, and innovation, we are committed to creating value for communities, businesses, and individuals across India.
+             </p>
           </div>
           <div className='lg:w-[40%] w-full flex lg:justify-end items-start'>
             <button className='bg-green-600 hover:bg-black hover:text-white py-4 px-6
@@ -66,21 +65,22 @@ const About = () => {
 
             <div className="flex flex-col items-start justify-center gap-3" data-aos="fade-up">
               <h1 className='text-black font-semibold text-[35px] capitalize leading-[1.2em]'>
-                What we do
+               Who We Are
               </h1>
               <p className='text-gray-600 text-md'>
-                We specialize in building dreams through real estate, construction, and interiors, strengthening industries with textiles and education, and redefining convenience with e-commerce,
-                all driven by quality, sustainability, and customer trust.
+                Margam Group is a diversified organization with strong roots in infrastructure, construction materials, education, and emerging industries. Founded with the vision of building sustainable opportunities, we have steadily
+                grown into a brand known for reliability and forward-thinking.
               </p>
             </div>
 
             <div className="flex flex-col items-start justify-center gap-3" data-aos="fade-up">
               <h1 className='text-black font-semibold text-[35px] capitalize leading-[1.2em]'>
-                Future outlook
+                Why Join Margam Group
               </h1>
               <p className='text-gray-600 text-md'>
-                We envision a future of boundless growth, where technology, sustainability, and creativity converge to elevate industries, redefine possibilities, and
-                establish our group as a trusted leader in worldwide transformation.
+                Become a Margaveer
+               Our people are our greatest strength. At Margam, we call our team members Margaveers – warriors of growth. We offer an environment 
+               where creativity, innovation, and ambition are celebrated.
               </p>
             </div>
           </div>
