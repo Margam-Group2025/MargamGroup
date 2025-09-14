@@ -1,8 +1,16 @@
 import { useEffect, useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { ChevronLeft } from "lucide-react";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default function HeroSlider() {
+  useEffect(() => {
+         AOS.init({
+           duration: 800,
+           delay: 100,
+           once: false,
+         });
+       }, []);
   const [current, setCurrent] = useState(0);
   const totalSlides = 6;
 
@@ -35,8 +43,9 @@ export default function HeroSlider() {
           alt="slide1"
           className="w-full h-full object-cover blur-0 brightness-50"
         />
-        <div className="absolute top-1/3 left-10 text-white">
-          <h1 className="text-4xl font-bold mb-4">Welcome to Slide 1</h1>
+        <div className="absolute top-1/3 left-10 text-white" data-aos="fade-up">
+        <h1 className="text-6xl font-bold mb-4" >Margam Group </h1>
+          <h1 className="text-4xl font-bold mb-4"  >The Way to Build, Grow & Inspire</h1>
           <button className="bg-blue-600 px-5 py-2 rounded-lg shadow-lg hover:bg-blue-700">
             Get Started
           </button>
@@ -53,8 +62,9 @@ export default function HeroSlider() {
           alt="slide1"
           className="w-full h-full object-cover blur-0 brightness-50"
         />
-        <div className="absolute top-1/3 left-10 text-white">
-          <h1 className="text-4xl font-bold mb-4">Welcome to Slide 1</h1>
+        <div className="absolute top-1/3 left-10 text-white" data-aos="fade-up">
+        <h1 className="text-6xl font-bold mb-4">Real Estate & Infrastructure</h1>
+          <h1 className="text-4xl font-bold mb-4">Building for the Future.</h1>
           <button className="bg-blue-600 px-5 py-2 rounded-lg shadow-lg hover:bg-blue-700">
             Get Started
           </button>
@@ -72,8 +82,9 @@ export default function HeroSlider() {
           alt="slide2"
           className="w-full h-full object-cover blur-0 brightness-50"
         />
-        <div className="absolute top-1/3 left-10 text-white">
-          <h1 className="text-4xl font-bold mb-4">Welcome to Slide 2</h1>
+        <div className="absolute top-1/3 left-10 text-white" data-aos="fade-up">
+          <h1 className="text-6xl font-bold mb-4">BricknBar-Construction Materials</h1>
+          <h1 className="text-4xl font-bold mb-4">Your Trusted Partner in Building Materials.</h1>
           <button className="bg-green-600 px-5 py-2 rounded-lg shadow-lg hover:bg-green-700">
             Explore More
           </button>
@@ -90,8 +101,9 @@ export default function HeroSlider() {
           alt="slide3"
           className="w-full h-full object-cover blur-0 brightness-50"
         />
-        <div className="absolute top-1/3 left-10 text-white">
-          <h1 className="text-4xl font-bold mb-4">Welcome to Slide 3</h1>
+        <div className="absolute top-1/3 left-10 text-white" data-aos="fade-up">
+          <h1 className="text-6xl font-bold mb-4">Mohepiya - Premium Textiles</h1>
+          <h1 className="text-4xl font-bold mb-4">Weaving Quality, Style, and Comfort for You.</h1>
           <button className="bg-red-600 px-5 py-2 rounded-lg shadow-lg hover:bg-red-700">
             Learn More
           </button>
@@ -108,8 +120,9 @@ export default function HeroSlider() {
           alt="slide3"
           className="w-full h-full object-cover blur-0 brightness-50"
         />
-        <div className="absolute top-1/3 left-10 text-white">
-          <h1 className="text-4xl font-bold mb-4">Welcome to Slide 3</h1>
+        <div className="absolute top-1/3 left-10 text-white" data-aos="fade-up">
+          <h1 className="text-5xl font-bold mb-4">INSD(Education & Skill Development)</h1>
+          <h1 className="text-4xl font-bold mb-4">Designing Careers, Building Futures.</h1>
           <button className="bg-red-600 px-5 py-2 rounded-lg shadow-lg hover:bg-red-700">
             Learn More
           </button>
@@ -126,8 +139,9 @@ export default function HeroSlider() {
           alt="slide3"
           className="w-full h-full object-cover blur-sm brightness-50"
         />
-        <div className="absolute top-1/3 left-10 text-white">
-          <h1 className="text-4xl font-bold mb-4">Welcome to Slide 3</h1>
+        <div className="absolute top-1/3 left-10 text-white" data-aos="fade-up">
+          <h1 className="text-6xl font-bold mb-4"> Construction</h1>
+<h1 className="text-4xl font-bold mb-4">Building Strong Foundations for Your Dreams.</h1>
           <button className="bg-red-600 px-5 py-2 rounded-lg shadow-lg hover:bg-red-700">
             Learn More
           </button>
