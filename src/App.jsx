@@ -9,6 +9,7 @@ import Connect from "./components/Connect";
 import Hero from "./components/Hero";
 import Blog from "./components/Blog";
 import toast, { Toaster } from "react-hot-toast";
+import AboutOwner from "./components/AboutOwner";
 
 function HomePage() {
   return (
@@ -16,6 +17,9 @@ function HomePage() {
     <div className="overflow-y-hidden">
       <section id="home">
         <Hero />
+      </section>
+      <section>
+      <AboutOwner/>
       </section>
       <section id="about">
         <About />
