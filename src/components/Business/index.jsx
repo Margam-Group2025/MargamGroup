@@ -113,7 +113,7 @@ const AboutSection = () => {
                We strive to provide not just buildings, but environments where people can thrive, invest confidently, and create meaningful lifestyles.
             </p>
             <a
-              href="#"
+              href="https://nirmalyasaiannex.com/"
               className="inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
             >
               Learn More <ArrowRight size={18} />
@@ -195,7 +195,7 @@ const AboutSection = () => {
               and long-lasting satisfaction for families and businesses alike.
             </p>
             <a
-              href="#"
+              href="https://www.bricknbar.com/"
               className="inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
             >
               Learn More <ArrowRight size={18} />
@@ -248,10 +248,11 @@ const AboutSection = () => {
               />
               <h3 className="text-lg font-semibold text-gray-800">Real Estate</h3>
               <p className="text-gray-600 text-sm flex-grow" data-aos="fade-left">
-                Creating modern, sustainable communities with innovative designs, delivering spaces that inspire lifestyles and long-term value
+                Margam Nirman develops residential and commercial spaces that blend design, sustainability,
+                and modern living. With every project, we focus on delivering lasting value, superior quality, and future-ready infrastructure.
               </p>
               <a
-                href="#"
+                href="https://nirmalyasaiannex.com/"
                 className="mt-3 inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
               >
                 Explore <ArrowRight size={16} />
@@ -266,12 +267,13 @@ const AboutSection = () => {
                 className="w-full h-40 object-cover rounded-lg mb-4"
                 data-aos="zoom-in"
               />
-              <h3 className="text-lg font-semibold text-gray-800">Construction</h3>
+              <h3 className="text-lg font-semibold text-gray-800">Construction Materials</h3>
               <p className="text-gray-600 text-sm flex-grow" data-aos="fade-left">
-               Building with strength, precision, and innovation, delivering reliable projects that shape tomorrow’s communities with excellence.
+                BricknBar is Margam Group’s e-commerce venture for construction materials. From blocks, bricks, steel, and cement to finishing materials, we ensure 
+                builders and homeowners get reliable supplies at the right price.
               </p>
               <a
-                href="#"
+                href="https://www.bricknbar.com/"
                 className="mt-3 inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
               >
                 Explore <ArrowRight size={16} />
@@ -291,7 +293,7 @@ const AboutSection = () => {
                 Transforming spaces into personalized, inspiring environments that combine beauty, comfort, and modern
               </p>
               <a
-                href="#"
+                href="https://www.bricknbar.com/"
                 className="mt-3 inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
               >
                 Explore <ArrowRight size={16} />
@@ -303,7 +305,7 @@ const AboutSection = () => {
               <div className="bg-white rounded-xl shadow-md p-4 flex flex-col justify-between">
                 <img
                   src="https://www.thestatesman.com/wp-content/uploads/2021/10/QT-online-education-village.jpg"
-                  alt="E-Commerce"
+                  alt="Education"
                   className="w-full h-40 object-cover rounded-lg mb-4"
                   data-aos="zoom-in"
                 />
