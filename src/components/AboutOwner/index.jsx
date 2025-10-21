@@ -20,15 +20,15 @@ const AboutOwner = () => {
             </h2>
           </div>
 
-          <h3 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+          {/* <h3 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
              Founder & Director, Margam Group
-          </h3>
+          </h3> */}
           {/* <h4 className="text-lg text-gray-700 font-semibold mb-4">
             Founder & Director, Margam Group
           </h4> */}
 
           <p className="text-gray-600 text-base leading-relaxed mb-3">
-            Brahmanand Nahak is an entrepreneur with a vision to create businesses that combine growth with long-term value. As the Founder and Director of Margam Group, he has been instrumental in shaping the company into a diversified enterprise.
+            An innovative entrepreneur with a vision to build businesses that balance growth and long-term value, the Founder and Director of a leading diversified enterprise has played a key role in transforming the company into a dynamic and forward-looking organization.
           </p>
           <p className="text-gray-600 text-base leading-relaxed">
             The Margam Group spans multiple sectors, including real estate, construction materials, education, digital business solutions, and upcoming ventures in manufacturing—each reflecting his commitment to innovation and sustainable development.
