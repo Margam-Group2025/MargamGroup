@@ -17,8 +17,8 @@ function HomePage() {
     <div className="overflow-y-hidden">
       <section id="home">
         <Hero />
-      </section>
-      <section>
+      </section>       
+      <section>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
       <AboutOwner/>
       </section>
       <section id="about">
@@ -27,9 +27,9 @@ function HomePage() {
       <section id="business">
         <Business />
       </section>
-      <section id="team">
+      {/* <section id="team">
         <Team />
-      </section>
+      </section> */}
       <section id="connect">
         <Connect />
       </section>

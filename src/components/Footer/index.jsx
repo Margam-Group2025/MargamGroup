@@ -1,4 +1,6 @@
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Link as ScrollLink } from "react-scroll";
+
 
 export default function Footer() {
   return (
@@ -14,15 +16,31 @@ export default function Footer() {
         </div>
 
         {/* Quick Links */}
-        <div>
-          <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
+       <div>
+         <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
           <ul className="space-y-3 text-sm">
-            <li><a href="/about" className="hover:text-green-600 ">About Us</a></li>
-            <li><a href="/business" className="hover:text-green-600">Our Business</a></li>
-            <li><a href="/team" className="hover:text-green-600">Our Team</a></li>
-            <li><a href="/connect" className="hover:text-green-600">Connect Us</a></li>
-          </ul>
-        </div>
+           <li>
+            <ScrollLink to="about" smooth={true} duration={500} offset={-80} className="hover:text-blue-700 cursor-pointer">
+             About Us
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to="business" smooth={true} duration={500} offset={-80} className="hover:text-blue-700 cursor-pointer">
+            Our Business
+            </ScrollLink>
+         </li>
+         <li>
+           <ScrollLink to="team" smooth={true} duration={500} offset={-80} className="hover:text-blue-700 cursor-pointer">
+            Our Team
+           </ScrollLink>
+         </li>
+         <li>
+            <ScrollLink to="connect" smooth={true} duration={500} offset={-80} className="hover:text-blue-700 cursor-pointer">
+            Connect Us
+            </ScrollLink>
+        </li>
+        </ul>
+       </div>
 
         {/* Contact Info */}
         <div>
@@ -56,7 +74,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} <span className="text-themegreen">Margam Group</span>. All Rights Reserved.
+        © {new Date().getFullYear()} <span className="text-blue-700">Margam Group</span>. All Rights Reserved.
       </div>
     </footer>
   );

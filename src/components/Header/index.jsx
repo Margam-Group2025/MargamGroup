@@ -11,9 +11,8 @@ const Header = () => {
     { name: "Home", to: "home", type: "scroll" },
     { name: "About", to: "about", type: "scroll" },
     { name: "Business", to: "business", type: "scroll" },
-    { name: "Team", to: "team", type: "scroll" },
     { name: "Connect", to: "connect", type: "scroll" },
-    { name: "Blog", to: "/blog", type: "route" }, // separate page
+    { name: "Blog", to: "/blog", type: "route" },
   ];
 
   useEffect(() => {
@@ -28,11 +27,15 @@ const Header = () => {
   }, [menuOpen]);                   
 
   return (
-    <header className="bg-black py-4 lg:px-[80px] px-7 fixed top-0 left-0 w-full z-50">
+    <header className="bg-gray-800 py-4 lg:px-[80px] px-7 fixed top-0 left-0 w-full z-50">
       <div className="flex justify-between items-center">
         {/* logo */}
-        <div className="text-themegreen font-bold lg:text-4xl text-3xl uppercase">
-          my logo
+        <div className="flex items-center">
+        <img 
+         src="/logo.png" 
+         alt="Logo" 
+         className=" h-20 lg:h-12 lg:w-30 object-contain" 
+         />
         </div>
 
         {/* mobile toggle */}
@@ -56,8 +59,8 @@ const Header = () => {
                     offset={-80} // adjust for header height
                     className={`cursor-pointer ${
                       link.name === "Home"
-                        ? "text-themegreen"
-                        : "hover:text-themegreen transition-colors"
+                        ? "text-blue-700"
+                        : "hover:text-blue-700 transition-colors"
                     }`}
                   >
                     {link.name}
@@ -65,7 +68,7 @@ const Header = () => {
                 ) : (
                   <RouterLink
                     to={link.to}
-                    className="cursor-pointer hover:text-themegreen transition-colors"
+                    className="cursor-pointer hover:text-blue-700 transition-colors"
                   >
                     {link.name}
                   </RouterLink>
@@ -100,8 +103,8 @@ const Header = () => {
             onClick={() => setMenuOpen(false)}
             className={`block cursor-pointer ${
               link.name === "Home"
-                ? "text-themegreen"
-                : "hover:text-themegreen transition-colors"
+                ? "text-blue-700"
+                : "hover:text-blue-700 transition-colors"
             }`}
           >
             {link.name}
@@ -110,7 +113,7 @@ const Header = () => {
           <RouterLink
             to={link.to}
             onClick={() => setMenuOpen(false)}
-            className="block cursor-pointer hover:text-themegreen transition-colors"
+            className="block cursor-pointer hover:text-blue-700 transition-colors"
           >
             {link.name}
           </RouterLink>

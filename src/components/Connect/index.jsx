@@ -63,15 +63,15 @@ const Connect = () => {
             <div className="space-y-3 text-sm text-gray-700">
               <div className="flex items-center gap-4">
                 <MdOutlineEmail className="text-blue-600" />
-                <span>contact@margamgroup.com</span>
+                <span>margamgroup2025@gmail.com</span>
               </div>
               <div className="flex items-center gap-4">
                 <FaPhoneAlt className="text-blue-600" />
-                <span>+91 12345 67890</span>
+                <span>+91 7749950999</span>
               </div>
               <div className="flex items-center gap-4">
                 <MdLocationOn className="text-blue-600" />
-                <span>77 Massachusetts Ave, Cambridge, MA 02139, USA</span>
+                <span>Margam Group, Bhubaneswar, India</span>
               </div>
             </div>
           </div>

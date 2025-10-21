@@ -19,7 +19,7 @@ const AboutSection = () => {
 
     <div className="w-full px-6 py-12">
      <div className="w-full mb-10" data-aos="fade-up">
-      <h1 className="text-center text-3xl font-bold text-green-600 py-4 rounded-lg ">
+      <h1 className="text-center text-3xl font-bold text-blue-700 py-4 rounded-lg ">
         Our Business
       </h1>
        <span className="flex mt-2 text-gray-600 text-sm font-semibold items-center justify-center ">
@@ -35,70 +35,94 @@ const AboutSection = () => {
           }}
           className={`px-4 py-2 rounded-full border ${
             activeCategory === "All"
-              ? "bg-green-600 text-white"
-              : "bg-white text-gray-700 border-gray-300 hover:bg-green-100"
+              ? " bg-blue-700 text-white"
+              : "bg-white text-gray-700 border-gray-300 hover:bg-blue-100"
           }`}
         >
           All
         </button>
         <button
-          onClick={() => setActiveCategory("Real Estate")}
+          onClick={() => setActiveCategory("Agriculture")}
           className={`px-4 py-2 rounded-full border ${
-            activeCategory === "Real Estate"
-              ? "bg-green-600 text-white"
-              : "bg-white text-gray-700 border-gray-300 hover:bg-green-100"
+            activeCategory === "Agriculture"
+              ? " bg-blue-700 text-white"
+              : "bg-white text-gray-700 border-gray-300 hover:bg-blue-100"
           }`}
         >
-          Real Estate
-        </button>
-        <button
-          onClick={() => setActiveCategory("Education")}
-          className={`px-4 py-2 rounded-full border ${
-            activeCategory === "Education"
-              ? "bg-green-600 text-white"
-              : "bg-white text-gray-700 border-gray-300 hover:bg-green-100"
-          }`}
-        >
-          Education
-        </button>
-        <button
-          onClick={() => setActiveCategory("Textile")}
-          className={`px-4 py-2 rounded-full border ${
-            activeCategory === "Textile"
-              ? "bg-green-600 text-white"
-              : "bg-white text-gray-700 border-gray-300 hover:bg-green-100"
-          }`}
-        >
-          Textile
-        </button>
-        <button
-          onClick={() => setActiveCategory("Home & Interiors")}
-          className={`px-4 py-2 rounded-full border ${
-            activeCategory === "Home & Interiors"
-              ? "bg-green-600 text-white"
-              : "bg-white text-gray-700 border-gray-300 hover:bg-green-100"
-          }`}
-        >
-         Home & Interiors
+          Agriculture
         </button>
         <button
           onClick={() => setActiveCategory("Construction")}
           className={`px-4 py-2 rounded-full border ${
             activeCategory === "Construction"
-              ? "bg-green-600 text-white"
-              : "bg-white text-gray-700 border-gray-300 hover:bg-green-100"
+              ? " bg-blue-700 text-white"
+              : "bg-white text-gray-700 border-gray-300 hover:bg-blue-100"
           }`}
         >
           Construction
         </button>
+        <button
+          onClick={() => setActiveCategory("Education")}
+          className={`px-4 py-2 rounded-full border ${
+            activeCategory === "Education"
+              ? " bg-blue-700 text-white"
+              : "bg-white text-gray-700 border-gray-300 hover:bg-blue-100"
+          }`}
+        >
+          Education
+        </button>
+        <button
+          onClick={() => setActiveCategory("Home & Interiors")}
+          className={`px-4 py-2 rounded-full border ${
+            activeCategory === "Home & Interiors"
+              ? " bg-blue-700 text-white"
+              : "bg-white text-gray-700 border-gray-300 hover:bg-blue-100"
+          }`}
+        >
+         Home & Interiors
+        </button>
+        <button
+          onClick={() => setActiveCategory("Real Estate")}
+          className={`px-4 py-2 rounded-full border ${
+            activeCategory === "Real Estate"
+              ? " bg-blue-700 text-white"
+              : "bg-white text-gray-700 border-gray-300 hover:bg-blue-100"
+          }`}
+        >
+          Real Estate
+        </button>
       </div>
 
       {/* Category Detail (Only when NOT All) */}
+      {activeCategory === "Agriculture" && (
+        <div className="flex flex-col lg:flex-row items-center gap-8 mb-12">
+           <img src="https://theaseanmagazine.asean.org/files/media/2025/04/issue43-21-1.jpg" 
+           alt="Real Estate" 
+            className="w-[70%] lg:w-1/2 rounded-xl shadow-md"
+             data-aos="zoom-in"
+          />
+          <div className="w-full lg:w-1/2 space-y-4" data-aos="fade-left">
+            <h2 className="text-2xl font-bold text-gray-800">Nurturing the Land, Sustaining the Future</h2>
+            <p className="text-gray-600">
+            At Margam Nirman, we believe that true progress begins with the land. Our agricultural ventures are designed to harmonize modern innovation with the timeless art of cultivation. By integrating sustainable farming practices, smart resource management, and eco-conscious technology,
+             we aim to nurture the soil while enhancing productivity.
+             </p>
+            <p className="text-gray-600">
+              Our agricultural initiatives go beyond cultivation; they empower rural economies and promote self-reliance. Through innovation, research, and community partnerships, we aim to strengthen the agricultural value chain — from farm to market. With a focus on eco-friendly practices and long-term resilience, we are committed to growing not just crops, but a sustainable future rooted in harmony with nature.
+            </p>
+            <a
+              href="https://nirmalyasaiannex.com/"
+              className="inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
+            >
+              Learn More <ArrowRight size={18} />
+            </a>
+          </div>
+        </div>
+      )}
       {activeCategory === "Real Estate" && (
         <div className="flex flex-col lg:flex-row items-center gap-8 mb-12">
-          <img
-            src="https://nirmalyasaiannex.com/wp-content/uploads/elementor/thumbs/Night-1-scaled-q9xj3gk0pv1o1gx4t2r4snertghfmgkcifbohk6tnk.jpg"
-            alt="Real Estate"
+           <img src="/realestate.jpg" 
+           alt="Real Estate" 
             className="w-[70%] lg:w-1/2 rounded-xl shadow-md"
              data-aos="zoom-in"
           />
@@ -114,7 +138,7 @@ const AboutSection = () => {
             </p>
             <a
               href="https://nirmalyasaiannex.com/"
-              className="inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
+              className="inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
             >
               Learn More <ArrowRight size={18} />
             </a>
@@ -141,7 +165,7 @@ const AboutSection = () => {
              </p>
             <a
               href="#"
-              className="inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
+              className="inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
             >
               Learn More <ArrowRight size={18} />
             </a>
@@ -169,7 +193,7 @@ const AboutSection = () => {
             </p>
             <a
               href="#"
-              className="inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
+              className="inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
             >
               Learn More <ArrowRight size={18} />
             </a>
@@ -196,7 +220,7 @@ const AboutSection = () => {
             </p>
             <a
               href="https://www.bricknbar.com/"
-              className="inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
+              className="inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
             >
               Learn More <ArrowRight size={18} />
             </a>
@@ -225,7 +249,7 @@ const AboutSection = () => {
             </p>
             <a
               href="#"
-              className="inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
+              className="inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
             >
               Learn More <ArrowRight size={18} />
             </a>
@@ -237,23 +261,24 @@ const AboutSection = () => {
       {/* Cards Section (Only for ALL) */}
       {activeCategory === "All" && (
         <>
+         
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
             {/* Card 1 */}
             <div className="bg-white rounded-xl shadow-md p-4 flex flex-col justify-between">
               <img
-                src="https://nirmalyasaiannex.com/wp-content/uploads/2023/07/Gate-view-scaled.jpg"
+                src="https://theaseanmagazine.asean.org/files/media/2025/04/issue43-21-1.jpg"
                 alt="Real Estate"
                 className="w-full h-40 object-cover rounded-lg mb-4"
                 data-aos="zoom-in"
               />
-              <h3 className="text-lg font-semibold text-gray-800">Real Estate</h3>
+              <h3 className="text-lg font-semibold text-gray-800">Agriculture</h3>
               <p className="text-gray-600 text-sm flex-grow" data-aos="fade-left">
-                Margam Nirman develops residential and commercial spaces that blend design, sustainability,
-                and modern living. With every project, we focus on delivering lasting value, superior quality, and future-ready infrastructure.
+                At Margam Nirman, we believe that true progress begins with the land. Our agricultural ventures are designed to harmonize modern innovation with the timeless art of cultivation. By integrating sustainable farming practices and eco-conscious technology.
               </p>
               <a
-                href="https://nirmalyasaiannex.com/"
-                className="mt-3 inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
+                href=""
+                className="mt-3 inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
               >
                 Explore <ArrowRight size={16} />
               </a>
@@ -262,26 +287,48 @@ const AboutSection = () => {
             {/* Card 2 */}
             <div className="bg-white rounded-xl shadow-md p-4 flex flex-col justify-between">
               <img
-                src="https://nirmalyasaiannex.com/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-05-at-11.41.33-768x428.jpeg"
+                src="https://www.autodesk.com/blogs/construction/wp-content/uploads/2024/07/common-types-of-construction-tools-60.jpg"
                 alt="Construction"
                 className="w-full h-40 object-cover rounded-lg mb-4"
                 data-aos="zoom-in"
               />
-              <h3 className="text-lg font-semibold text-gray-800">Construction Materials</h3>
+              <h3 className="text-lg font-semibold text-gray-800">Construction</h3>
               <p className="text-gray-600 text-sm flex-grow" data-aos="fade-left">
                 BricknBar is Margam Group’s e-commerce venture for construction materials. From blocks, bricks, steel, and cement to finishing materials, we ensure 
                 builders and homeowners get reliable supplies at the right price.
               </p>
               <a
                 href="https://www.bricknbar.com/"
-                className="mt-3 inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
+                className="mt-3 inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
               >
                 Explore <ArrowRight size={16} />
               </a>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white rounded-xl shadow-md p-4 flex flex-col justify-between">
+             
+              <div className="bg-white rounded-xl shadow-md p-4 flex flex-col justify-between">
+                <img
+                  src="https://www.thestatesman.com/wp-content/uploads/2021/10/QT-online-education-village.jpg"
+                  alt="Education"
+                  className="w-full h-40 object-cover rounded-lg mb-4"
+                  data-aos="zoom-in"
+                />
+                <h3 className="text-lg font-semibold text-gray-800"> Education & Skill Development</h3>
+                <p className="text-gray-600 text-sm flex-grow" data-aos="fade-left">
+                 Empowering learners with knowledge, skills, and creativity to build brighter futures and drive meaningful change.
+                </p>
+                <a
+                  href="#"
+                  className="mt-3 inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
+                >
+                  Explore <ArrowRight size={16} />
+                </a>
+              </div>
+
+            {/* Card 4 */}
+             {showAll && (
+             <div className="bg-white rounded-xl shadow-md p-4 flex flex-col justify-between">
               <img
                 src="https://c8.alamy.com/comp/2RKWK2P/construction-materials-and-tools-isolated-on-white-background-3d-illustration-2RKWK2P.jpg"
                 alt="E-commerce"
@@ -294,64 +341,41 @@ const AboutSection = () => {
               </p>
               <a
                 href="https://www.bricknbar.com/"
-                className="mt-3 inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
+                className="mt-3 inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
               >
                 Explore <ArrowRight size={16} />
               </a>
             </div>
-
-            {/* Card 4 */}
-            {showAll && (
-              <div className="bg-white rounded-xl shadow-md p-4 flex flex-col justify-between">
-                <img
-                  src="https://www.thestatesman.com/wp-content/uploads/2021/10/QT-online-education-village.jpg"
-                  alt="Education"
-                  className="w-full h-40 object-cover rounded-lg mb-4"
-                  data-aos="zoom-in"
-                />
-                <h3 className="text-lg font-semibold text-gray-800">Education</h3>
-                <p className="text-gray-600 text-sm flex-grow" data-aos="fade-left">
-                 Empowering learners with knowledge, skills, and creativity to build brighter futures and drive meaningful change.
-                </p>
-                <a
-                  href="#"
-                  className="mt-3 inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
-                >
-                  Explore <ArrowRight size={16} />
-                </a>
-              </div>
-            )}
-
+             )}
             {/* Card 5 */}
-            {showAll && (
-              <div className="bg-white rounded-xl shadow-md p-4 flex flex-col justify-between">
-                <img
-                  src="https://blog.expobazaar.com/wp-content/uploads/2022/05/elcarito-lFJJM6hmne4-unsplash-scaled.jpg"
-                  alt="textile"
-                  className="w-full h-40 object-cover rounded-lg mb-4"
-                  data-aos="zoom-in"
-                />
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Textile
-                </h3>
-                <p className="text-gray-600 text-sm flex-grow" data-aos="fade-left">
-                  Weaving tradition with innovation to deliver world-class fabrics that embody durability, comfort, and timeless style.
-                </p>
-                <a
-                  href="#"
-                  className="mt-3 inline-flex items-center gap-2 text-green-600 font-medium hover:underline"
-                >
-                  Explore <ArrowRight size={16} />
-                </a>
-              </div>
-            )}
+             {showAll && (
+             <div className="bg-white rounded-xl shadow-md p-4 flex flex-col justify-between">
+              <img
+                src="/realestate.jpg"
+                alt="Real Estate"
+                className="w-full h-40 object-cover rounded-lg mb-4"
+                data-aos="zoom-in"
+              />
+              <h3 className="text-lg font-semibold text-gray-800">Real Estate</h3>
+              <p className="text-gray-600 text-sm flex-grow" data-aos="fade-left">
+                Margam Nirman develops residential and commercial spaces that blend design, sustainability,
+                and modern living. With every project, we focus on delivering lasting value, superior quality, and future-ready infrastructure.
+              </p>
+              <a
+                href="https://nirmalyasaiannex.com/"
+                className="mt-3 inline-flex items-center gap-2 text-blue-600 font-medium hover:underline"
+              >
+                Explore <ArrowRight size={16} />
+              </a>
+            </div>
+             )}
           </div>
 
           {/* View More Button */}
           <div className="text-center mt-8">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-6 py-2 bg-green-600 text-white rounded-full hover:bg-black transition"
+              className="px-6 py-2  bg-blue-700 text-white rounded-full hover:bg-black transition"
             >
               {showAll ? "View Less" : "View More"}
             </button>

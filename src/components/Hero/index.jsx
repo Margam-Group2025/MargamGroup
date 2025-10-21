@@ -39,7 +39,7 @@ export default function HeroSlider() {
         }`}
       >
         <img
-          src="https://mggroup.ae/img/about/mg-group.jpg"
+          src="https://img.freepik.com/free-vector/team-happy-people-receiving-order-from-courier_74855-6672.jpg?semt=ais_hybrid&w=740&q=80"
           alt="slide1"
           className="w-full h-full object-cover blur-0 brightness-50"
         />
@@ -58,7 +58,7 @@ export default function HeroSlider() {
         }`}
       >
         <img
-          src="https://nirmalyasaiannex.com/wp-content/uploads/2023/07/1-Aerial-1-scaled.jpg"
+          src="/realestate.jpg"
           alt="slide1"
           className="w-full h-full object-cover blur-0 brightness-50"
         />
@@ -85,7 +85,7 @@ export default function HeroSlider() {
         <div className="absolute top-1/3 left-10 text-white" data-aos="fade-up">
           <h1 className="text-6xl font-bold mb-4">BricknBar-Construction Materials</h1>
           <h1 className="text-4xl font-bold mb-4">Your Trusted Partner in Building Materials.</h1>
-          <button className="bg-green-600 px-5 py-2 rounded-lg shadow-lg hover:bg-green-700">
+          <button className=" bg-blue-700 px-5 py-2 rounded-lg shadow-lg hover:bg-green-700">
             Explore More
           </button>
         </div>

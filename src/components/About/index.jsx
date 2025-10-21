@@ -22,19 +22,19 @@ const About = () => {
           data-aos="fade-up"
         >
           <div className='lg:w-[60%] w-full flex flex-col justify-center items-start gap-4'>
-            <h1 className='text-green-600 uppercase text-md'>Who We Are</h1>
+            <h1 className='text-b-600 uppercase text-md text-blue-700'>Who We Are</h1>
             <h1 className='text-black lg-text-[45px] text-[30px] capitalize leading-[1.2em] font-[20px]'>
               MARGAM GROUP 
               <br />
-              <span className='text-neutral-500 font-extralight'>_____The Way_____</span>
+              <span className='text-neutral-500 font-extralight'>The Way_______</span>
             </h1>
             <p className='text-gray-500 text-md'>
              Margam Group is a multi-venture enterprise shaping the future of real estate, construction, education, 
-             and business solutions. With a focus on trust, quality, and innovation, we are committed to creating value for communities, businesses, and individuals across India.
+             and business solutions. With a focus on trust, quality, and innovation, we are committed to creating value for communities, businesses.
              </p>
           </div>
           <div className='lg:w-[40%] w-full flex lg:justify-end items-start'>
-            <button className='bg-green-600 hover:bg-black hover:text-white py-4 px-6
+            <button className=' bg-blue-700 hover:bg-black hover:text-white py-4 px-6
               text-black text-md font-semibold mt-5 rounded-md'>
               LEARN MORE
             </button>

@@ -21,11 +21,11 @@ const AboutOwner = () => {
           </div>
 
           <h3 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-            Brahmanand Nahak
+             Founder & Director, Margam Group
           </h3>
-          <h4 className="text-lg text-gray-700 font-semibold mb-4">
+          {/* <h4 className="text-lg text-gray-700 font-semibold mb-4">
             Founder & Director, Margam Group
-          </h4>
+          </h4> */}
 
           <p className="text-gray-600 text-base leading-relaxed mb-3">
             Brahmanand Nahak is an entrepreneur with a vision to create businesses that combine growth with long-term value. As the Founder and Director of Margam Group, he has been instrumental in shaping the company into a diversified enterprise.
@@ -35,13 +35,13 @@ const AboutOwner = () => {
           </p>
         </div>
         {/* Left Side - Image */}
-        <div className="w-full md:w-1/2"  data-aos="fade-left">
+        {/* <div className="w-full md:w-1/2"  data-aos="fade-left">
           <img 
             src="/owner .jpg" 
             alt="Company Owner" 
             className="rounded-lg shadow-lg w-full object-cover"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
