@@ -39,7 +39,7 @@ export default function HeroSlider() {
         }`}
       >
         <img
-          src="https://img.freepik.com/free-vector/team-happy-people-receiving-order-from-courier_74855-6672.jpg?semt=ais_hybrid&w=740&q=80"
+          src="https://imageio.forbes.com/specials-images/imageserve/61517de15b3fa218e4310d36/Woman-company-representative-holds-out-hand-for-handshake-welcoming-client/960x0.jpg?format=jpg&width=960"
           alt="slide1"
           className="w-full h-full object-cover blur-0 brightness-50"
         />
