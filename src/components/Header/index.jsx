@@ -21,7 +21,7 @@ const Header = () => {
   }, [menuOpen]);
 
   return (
-    <header className="bg-gray-800 py-4 lg:px-[80px] px-7 fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <header className="bg-white py-4 lg:px-[80px] px-7 fixed top-0 left-0 w-full z-50 shadow-sm transition-all duration-300">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center transition-all duration-300">
@@ -36,7 +36,7 @@ const Header = () => {
 
         {/* Mobile toggle */}
         <button
-          className="text-white text-2xl md:hidden"
+          className="text-black text-2xl md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <IoCloseSharp /> : <IoMdMenu />}
@@ -44,7 +44,7 @@ const Header = () => {
 
         {/* Desktop menu */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-10 text-lg text-white">
+          <ul className="flex space-x-10 text-lg text-black">
             {menuLinks.map((link) => (
               <li key={link.name}>
                 {link.type === "scroll" ? (
@@ -53,7 +53,7 @@ const Header = () => {
                     smooth={true}
                     duration={500}
                     offset={-80}
-                    className={`cursor-pointer ${
+                    className={`cursor-pointer font-medium ${
                       link.name === "Home"
                         ? "text-blue-700"
                         : "hover:text-blue-700 transition-colors"
@@ -64,7 +64,7 @@ const Header = () => {
                 ) : (
                   <RouterLink
                     to={link.to}
-                    className="cursor-pointer hover:text-blue-700 transition-colors"
+                    className="cursor-pointer font-medium hover:text-blue-700 transition-colors"
                   >
                     {link.name}
                   </RouterLink>
@@ -77,9 +77,9 @@ const Header = () => {
 
       {/* Mobile menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-black text-white transform
+        className={`fixed top-0 left-0 h-full w-64 bg-white text-black transform
         ${menuOpen ? "translate-x-0" : "-translate-x-full"}
-        transition-transform duration-300 ease-in-out z-40 flex flex-col`}
+        transition-transform duration-300 ease-in-out z-40 flex flex-col shadow-lg`}
       >
         <IoCloseSharp
           className="absolute top-4 right-4 text-3xl cursor-pointer"
@@ -95,7 +95,7 @@ const Header = () => {
                   duration={500}
                   offset={-80}
                   onClick={() => setMenuOpen(false)}
-                  className={`block cursor-pointer ${
+                  className={`block cursor-pointer font-medium ${
                     link.name === "Home"
                       ? "text-blue-700"
                       : "hover:text-blue-700 transition-colors"
@@ -107,7 +107,7 @@ const Header = () => {
                 <RouterLink
                   to={link.to}
                   onClick={() => setMenuOpen(false)}
-                  className="block cursor-pointer hover:text-blue-700 transition-colors"
+                  className="block cursor-pointer font-medium hover:text-blue-700 transition-colors"
                 >
                   {link.name}
                 </RouterLink>
