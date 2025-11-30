@@ -1,54 +1,41 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import About from "./components/About";
-import Business from "./components/Business";
-import Team from "./components/Team";
 import Footer from "./components/Footer";
-import Connect from "./components/Connect";
-import Hero from "./components/Hero";
-import Blog from "./components/Blog";
 import toast, { Toaster } from "react-hot-toast";
-import AboutOwner from "./components/AboutOwner";
-
-function HomePage() {
-  return (
-    <>
-    <div className="overflow-y-hidden">
-      <section id="home">
-        <Hero />
-      </section>       
-      <section>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-      <AboutOwner/>
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <section id="business">
-        <Business />
-      </section>
-      {/* <section id="team">
-        <Team />
-      </section> */}
-      <section id="connect">
-        <Connect />
-      </section>
-      </div>
-    </>
-  );
-}
-
+import Home from "./pages/Home";
+import Business from "./pages/Business";
+import Career from "./pages/Career";
+import Agriculture from "./pages/Agriculture";
+import Education from "./pages/Education";
+import Realestate from "./pages/Realestate";
+import BlogPage from "./pages/BlogPage";
+import AboutUs from "./pages/AboutUs";
+import PostDetails from "./components/PostDetails";
+import Contact from "./pages/Contact";
+import ScrollToTop from "./components/SrcollToTop";
 function App() {
   return (
-    <>
-      <Toaster position="top-center" reverseOrder={false} />
+    <> 
+      <ScrollToTop />
+      <Toaster position="top-center" reverseOrder={true} />
       <Header />
-
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/blog" element={<Blog />} />
-      </Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/business" element={<Business />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/agriculture" element={<Agriculture />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/contactus" element={<Contact />} />
+        <Route path="/realestate" element={<Realestate />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:id" element={<PostDetails />} />
+        <Route path="/post" element={<BlogPage />} />
+        <Route path="/post/:id" element={<PostDetails />} />
+        <Route path ="*" element={<h2 className="text-center text-red-600">Page Not Found</h2>} />
 
+      </Routes>
       <Footer />
     </>
   );
