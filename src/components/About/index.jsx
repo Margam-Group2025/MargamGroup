@@ -1,173 +1,95 @@
-import { useState } from "react";
-import {
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Mail,
-  Phone,
-  MapPin,
-  ChevronDown,
-} from "lucide-react";
-import { Link } from "react-router-dom";
-
-export default function Footer() {
-  const [openSection, setOpenSection] = useState(null);
-
-  const toggle = (section) => {
-    setOpenSection(openSection === section ? null : section);
-  };
+import React, { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';   
+import { Link } from 'react-router-dom';
+const About = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      delay: 200,
+      once: false,
+    });
+  }, []);
 
   return (
-    <footer className="bg-blue-900 text-gray-200 py-14">
-      <div className="w-full px-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
-
-        {/* Company Info */}
-        <div>
-          <button
-            onClick={() => toggle("company")}
-            className="w-full flex justify-between items-center lg:block lg:cursor-auto lg:mb-4"
-          >
-            <h2 className="text-xl font-semibold">Our Company</h2>
-
-          </button>
-
-          <div
-            className={"mt-4 text-sm leading-6 "}
-          >
-            A diversified business group excelling in real estate, construction,
-            interiors, education, textiles and e-commerce.
+    <>
+      <div id='about' className='w-full h-auto flex flex-col items-center 
+        justify-between lg:px-[80px] lg:py-[80px] py-[60px] px-[20px] gap-3'>
+        
+        {/* Top Box */}
+        <div id='top-box'
+          className='w-full flex lg:flex-row flex-col items-center justify-between gap-3'
+          data-aos="fade-up"
+        >
+          <div className='lg:w-[60%] w-full flex flex-col justify-center items-start gap-4'>
+            <h1 className='text-b-600 uppercase text-md text-blue-700'>Who We Are</h1>
+            <h1 className='text-black lg-text-[45px] text-[30px] capitalize leading-[1.2em] font-[20px]'>
+              MARGAM GROUP 
+              <br />
+              <span className='text-neutral-500 font-extralight'>The Way_______</span>
+            </h1>
+            <p className='text-gray-500 text-md'>
+             Margam Group is a multi-venture enterprise shaping the future of real estate, construction, education, 
+             and business solutions. With a focus on trust, quality, and innovation, we are committed to creating value for communities, businesses.
+             </p>
+          </div>
+          <div className='lg:w-[40%] w-full flex lg:justify-end items-start'>
+            <Link to="/aboutus">
+            <button className=' bg-blue-700 hover:bg-black hover:text-white py-4 px-6
+              text-black text-md font-semibold mt-5 rounded-md'>
+              LEARN MORE
+            </button>
+            </Link>
           </div>
         </div>
 
-        {/* Quick Links */}
-        <div>
-          <button
-            onClick={() => toggle("links")}
-            className="w-full flex justify-between items-center lg:block lg:cursor-auto lg:mb-4"
-          >
-            <h2 className="text-xl font-semibold">Quick Links</h2>
-            <ChevronDown
-              className={`lg:hidden transition-transform ${
-                openSection === "links" ? "rotate-180" : ""
-              }`}
-            />
-          </button>
+        {/* Bottom Box */}
+        <div id='bottom-box'
+          className='w-full flex lg:flex-row flex-col justify-between items-center gap-[80px]'
+          data-aos="fade-right"
+        >
+          <div id='img-box' className='lg:w-[40%] w-full' data-aos="zoom-in">
+            <img src="/about.jpg" alt="" className='w-full bg-cover' />
+          </div>
 
-          <ul
-            className={`space-y-3 text-sm mt-4 
-              ${openSection === "links" ? "block" : "hidden lg:block"}
-              lg:w-fit lg:mx-auto`}
+          <div id='content-box'
+            className='lg:w-[60%] w-full flex flex-col items-start justify-between gap-[60px]'
           >
-            <li><Link to="/aboutus" className="hover:text-white">About Us</Link></li>
-            <li><Link to="/business" className="hover:text-white">Our Business</Link></li>
-            <li><Link to="/contact" className="hover:text-white">Connect Us</Link></li>
-            <li><Link to="/career" className="hover:text-white">Careers</Link></li>
-            <li><Link to="/blog" className="hover:text-white">Blog</Link></li>
-          </ul>
-        </div>
+            <div className="flex flex-col items-start justify-center gap-3" data-aos="fade-left">
+              <h1 className='text-black font-semibold text-[35px] capitalize leading-[1.2em]'>
+                our vision
+              </h1>
+              <p className='text-gray-600 text-md'>
+                Our vision is to redefine progress by uniting innovation, sustainability, and excellence, crafting solutions that enhance living, strengthen communities, and create
+                meaningful value across industries for a brighter tomorrow.
+              </p>
+            </div>
 
-        {/* Services */}
-        <div>
-          <button
-            onClick={() => toggle("services")}
-            className="w-full flex justify-between items-center lg:block lg:cursor-auto lg:mb-4"
-          >
-            <h2 className="text-xl font-semibold">Our Services</h2>
-            <ChevronDown
-              className={`lg:hidden transition-transform ${
-                openSection === "services" ? "rotate-180" : ""
-              }`}
-            />
-          </button>
+            <div className="flex flex-col items-start justify-center gap-3" data-aos="fade-up">
+              <h1 className='text-black font-semibold text-[35px] capitalize leading-[1.2em]'>
+               Who We Are
+              </h1>
+              <p className='text-gray-600 text-md'>
+                Margam Group is a diversified organization with strong roots in infrastructure, construction materials, education, and emerging industries. Founded with the vision of building sustainable opportunities, we have steadily
+                grown into a brand known for reliability and forward-thinking.
+              </p>
+            </div>
 
-          <ul
-            className={`space-y-3 text-sm mt-4
-              ${openSection === "services" ? "block" : "hidden lg:block"}
-              lg:w-fit lg:mx-auto`}
-          >
-            <li><a href="https://nirmalyasaiannex.com/" className="hover:text-white">Real Estate</a></li>
-            <li><a href="https://bricknbar.com/" className="hover:text-white">Construction Materials</a></li>
-            <li><Link to="/agriculture" className="hover:text-white">Agriculture</Link></li>
-            <li><Link to="/education" className="hover:text-white">Education</Link></li>
-            <li><a href="https://margamnirman.com/" className="hover:text-white">Construction</a></li>
-          </ul>
-        </div>
-
-        {/* Contact */}
-        <div>
-          <button
-            onClick={() => toggle("contact")}
-            className="w-full flex justify-between items-center lg:block lg:cursor-auto lg:mb-4"
-          >
-            <h2 className="text-xl font-semibold">Contact</h2>
-            <ChevronDown
-              className={`lg:hidden transition-transform ${
-                openSection === "contact" ? "rotate-180" : ""
-              }`}
-            />
-          </button>
-
-          <ul
-            className={`space-y-3 text-sm mt-4
-              ${openSection === "contact" ? "block" : "hidden lg:block"}
-              lg:w-fit lg:mx-auto`}
-          >
-            <li className="flex items-center gap-2">
-              <MapPin size={18} /> Bhubaneswar, India
-            </li>
-            <li className="flex items-center gap-2">
-              <Phone size={18} /> +91 7749950999
-            </li>
-            <li className="flex items-center gap-2">
-              <Mail size={18} /> margamgroup2025@gmail.com
-            </li>
-          </ul>
-        </div>
-
-        {/* Social */}
-        <div>
-          <button
-            onClick={() => toggle("social")}
-            className="w-full flex justify-between items-center lg:block lg:cursor-auto lg:mb-4"
-          >
-            <h2 className="text-xl font-semibold">Follow Us</h2>
-            <ChevronDown
-              className={`lg:hidden transition-transform ${
-                openSection === "social" ? "rotate-180" : ""
-              }`}
-            />
-          </button>
-
-          <div
-            className={`flex gap-4 mt-4 
-              ${openSection === "social" ? "flex" : "hidden lg:flex"}
-              lg:justify-center`}
-          >
-            <a className="p-2 bg-gray-700 rounded-full hover:bg-gray-600">
-              <Facebook size={20} />
-            </a>
-            <a className="p-2 bg-gray-700 rounded-full hover:bg-gray-600">
-              <Twitter size={20} />
-            </a>
-            <a className="p-2 bg-gray-700 rounded-full hover:bg-gray-600">
-              <Linkedin size={20} />
-            </a>
-            <a
-              href="https://www.instagram.com/margamgroup/"
-              className="p-2 bg-gray-700 rounded-full hover:bg-gray-600"
-            >
-              <Instagram size={20} />
-            </a>
+            <div className="flex flex-col items-start justify-center gap-3" data-aos="fade-up">
+              <h1 className='text-black font-semibold text-[35px] capitalize leading-[1.2em]'>
+                Why Join Margam Group
+              </h1>
+              <p className='text-gray-600 text-md'>
+                Become a Margaveer
+               Our people are our greatest strength. At Margam, we call our team members Margaveers – warriors of growth. We offer an environment 
+               where creativity, innovation, and ambition are celebrated.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Copyright */}
-      <div className="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()}{" "}
-        <span className="text-white font-semibold">Margam Group</span>. All Rights Reserved.
-      </div>
-    </footer>
-  );
+    </>
+  )
 }
+
+export default About;
