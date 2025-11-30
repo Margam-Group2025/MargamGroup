@@ -1,80 +1,172 @@
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
-import { Link as ScrollLink } from "react-scroll";
-
+import { useState } from "react";
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Mail,
+  Phone,
+  MapPin,
+  ChevronDown,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const [openSection, setOpenSection] = useState(null);
+
+  const toggle = (section) => {
+    setOpenSection(openSection === section ? null : section);
+  };
+
   return (
-    <footer className="bg-gray-900 text-gray-200 py-10 mt-20">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-        
+    <footer className="bg-blue-900 text-gray-200 py-14">
+      <div className="w-full px-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+
         {/* Company Info */}
         <div>
-          <h2 className="text-xl font-semibold mb-4">Our Company</h2>
-          <p className="text-sm leading-6">
-            A diversified business group excelling in real estate, construction, interiors, education, textiles, and e-commerce.
-          </p>
+          <button
+            onClick={() => toggle("company")}
+            className="w-full flex justify-between items-center lg:block lg:cursor-auto lg:mb-4"
+          >
+            <h2 className="text-xl font-semibold">Our Company</h2>
+
+          </button>
+
+          <div
+            className={"mt-4 text-sm leading-6 "}
+          >
+            A diversified business group excelling in real estate, construction,
+            interiors, education, textiles and e-commerce.
+          </div>
         </div>
 
         {/* Quick Links */}
-       <div>
-         <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
-          <ul className="space-y-3 text-sm">
-           <li>
-            <ScrollLink to="about" smooth={true} duration={500} offset={-80} className="hover:text-blue-700 cursor-pointer">
-             About Us
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink to="business" smooth={true} duration={500} offset={-80} className="hover:text-blue-700 cursor-pointer">
-            Our Business
-            </ScrollLink>
-         </li>
-         <li>
-           <ScrollLink to="team" smooth={true} duration={500} offset={-80} className="hover:text-blue-700 cursor-pointer">
-            Our Team
-           </ScrollLink>
-         </li>
-         <li>
-            <ScrollLink to="connect" smooth={true} duration={500} offset={-80} className="hover:text-blue-700 cursor-pointer">
-            Connect Us
-            </ScrollLink>
-        </li>
-        </ul>
-       </div>
-
-        {/* Contact Info */}
         <div>
-          <h2 className="text-xl font-semibold mb-4">Contact</h2>
-          <ul className="space-y-3 text-sm">
-            <li className="flex items-center gap-2"><MapPin size={18}/> Margam Group, Bhubaneswar, India</li>
-            <li className="flex items-center gap-2"><Phone size={18}/>+91 7749950999</li>
-            <li className="flex items-center gap-2"><Mail size={18}/> margamgroup2025@gmail.com</li>
+          <button
+            onClick={() => toggle("links")}
+            className="w-full flex justify-between items-center lg:block lg:cursor-auto lg:mb-4"
+          >
+            <h2 className="text-xl font-semibold">Quick Links</h2>
+            <ChevronDown
+              className={`lg:hidden transition-transform ${
+                openSection === "links" ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+
+          <ul
+            className={`space-y-3 text-sm mt-4 
+              ${openSection === "links" ? "block" : "hidden lg:block"}
+              lg:w-fit lg:mx-auto`}
+          >
+            <li><Link to="/aboutus" className="hover:text-white">About Us</Link></li>
+            <li><Link to="/business" className="hover:text-white">Our Business</Link></li>
+            <li><Link to="/contact" className="hover:text-white">Connect Us</Link></li>
+            <li><Link to="/career" className="hover:text-white">Careers</Link></li>
+            <li><Link to="/blog" className="hover:text-white">Blog</Link></li>
           </ul>
         </div>
 
-        {/* Social Media */}
+        {/* Services */}
         <div>
-          <h2 className="text-xl font-semibold mb-4">Follow Us</h2>
-          <div className="flex gap-4">
-            <a href="#" className="p-2 rounded-full bg-gray-800 hover:bg-gray-700">
-              <Facebook size={20}/>
+          <button
+            onClick={() => toggle("services")}
+            className="w-full flex justify-between items-center lg:block lg:cursor-auto lg:mb-4"
+          >
+            <h2 className="text-xl font-semibold">Our Services</h2>
+            <ChevronDown
+              className={`lg:hidden transition-transform ${
+                openSection === "services" ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+
+          <ul
+            className={`space-y-3 text-sm mt-4
+              ${openSection === "services" ? "block" : "hidden lg:block"}
+              lg:w-fit lg:mx-auto`}
+          >
+            <li><a href="https://nirmalyasaiannex.com/" className="hover:text-white">Real Estate</a></li>
+            <li><a href="https://bricknbar.com/" className="hover:text-white">Construction Materials</a></li>
+            <li><Link to="/agriculture" className="hover:text-white">Agriculture</Link></li>
+            <li><Link to="/education" className="hover:text-white">Education</Link></li>
+            <li><a href="https://margamnirman.com/" className="hover:text-white">Construction</a></li>
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <button
+            onClick={() => toggle("contact")}
+            className="w-full flex justify-between items-center lg:block lg:cursor-auto lg:mb-4"
+          >
+            <h2 className="text-xl font-semibold">Contact</h2>
+            <ChevronDown
+              className={`lg:hidden transition-transform ${
+                openSection === "contact" ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+
+          <ul
+            className={`space-y-3 text-sm mt-4
+              ${openSection === "contact" ? "block" : "hidden lg:block"}
+              lg:w-fit lg:mx-auto`}
+          >
+            <li className="flex items-center gap-2">
+              <MapPin size={18} /> Bhubaneswar, India
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone size={18} /> +91 7749950999
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail size={18} /> margamgroup2025@gmail.com
+            </li>
+          </ul>
+        </div>
+
+        {/* Social */}
+        <div>
+          <button
+            onClick={() => toggle("social")}
+            className="w-full flex justify-between items-center lg:block lg:cursor-auto lg:mb-4"
+          >
+            <h2 className="text-xl font-semibold">Follow Us</h2>
+            <ChevronDown
+              className={`lg:hidden transition-transform ${
+                openSection === "social" ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+
+          <div
+            className={`flex gap-4 mt-4 
+              ${openSection === "social" ? "flex" : "hidden lg:flex"}
+              lg:justify-center`}
+          >
+            <a className="p-2 bg-gray-700 rounded-full hover:bg-gray-600">
+              <Facebook size={20} />
             </a>
-            <a href="#" className="p-2 rounded-full bg-gray-800 hover:bg-gray-700">
-              <Twitter size={20}/>
+            <a className="p-2 bg-gray-700 rounded-full hover:bg-gray-600">
+              <Twitter size={20} />
             </a>
-            <a href="#" className="p-2 rounded-full bg-gray-800 hover:bg-gray-700">
-              <Linkedin size={20}/>
+            <a className="p-2 bg-gray-700 rounded-full hover:bg-gray-600">
+              <Linkedin size={20} />
             </a>
-            <a href="#" className="p-2 rounded-full bg-gray-800 hover:bg-gray-700">
-              <Instagram size={20}/>
+            <a
+              href="https://www.instagram.com/margamgroup/"
+              className="p-2 bg-gray-700 rounded-full hover:bg-gray-600"
+            >
+              <Instagram size={20} />
             </a>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} <span className="text-blue-700">Margam Group</span>. All Rights Reserved.
+      {/* Copyright */}
+      <div className="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+        © {new Date().getFullYear()}{" "}
+        <span className="text-white font-semibold">Margam Group</span>. All Rights Reserved.
       </div>
     </footer>
   );
