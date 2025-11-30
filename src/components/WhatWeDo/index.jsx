@@ -24,7 +24,7 @@ const WhatWeDo = () => {
 
           {/* Real Estate Image */}
           <img
-            src="/public/realestate.jpg"
+            src="/realestate.jpg"
             alt="Real Estate"
             className="w-full h-80 object-cover"
           />
@@ -44,7 +44,7 @@ const WhatWeDo = () => {
             </div>
 
             <img
-              src="/public/education.avif"
+              src="/education.avif"
               alt="Education"
               className="w-full h-full object-cover"
             />
@@ -62,7 +62,7 @@ const WhatWeDo = () => {
             </div>
 
             <img
-              src="/public/agro.avif"
+              src="/agro.avif"
               alt="Agriculture"
               className="w-full h-full object-cover"
             />
