@@ -61,7 +61,7 @@ export default function Footer() {
           >
             <li><Link to="/aboutus" className="hover:text-white">About Us</Link></li>
             <li><Link to="/business" className="hover:text-white">Our Business</Link></li>
-            <li><Link to="/contact" className="hover:text-white">Connect Us</Link></li>
+            <li><Link to="/contactus" className="hover:text-white">Connect Us</Link></li>
             <li><Link to="/career" className="hover:text-white">Careers</Link></li>
             <li><Link to="/blog" className="hover:text-white">Blog</Link></li>
           </ul>

@@ -11,7 +11,7 @@ const Career = () => {
           <p className="text-xl mb-8">
             Be a part of a dynamic and growing company. Explore exciting career opportunities with us.
           </p>
-          <Link to="/contact" className="bg-white text-green-700 hover:bg-gray-200 px-6 py-3 rounded-full text-lg font-semibold transition duration-300">
+          <Link to="/contactus" className="bg-white text-green-700 hover:bg-gray-200 px-6 py-3 rounded-full text-lg font-semibold transition duration-300">
             Contact Us
           </Link>
         </div>

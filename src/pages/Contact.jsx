@@ -172,7 +172,7 @@ const Contact = () => {
           <p className="text-gray-600 leading-relaxed">
             Phone: +91 7749950999 <br />
             <span className="flex items-center gap-2 mt-1">
-              <Mail size={20} /> margamgroup2025.com
+              <Mail size={20} /> margamgroup2025@gmail.com
             </span>
           </p>
         </div>
