@@ -114,8 +114,7 @@ const Header = () => {
         {/* LOGO + CLOSE */}
         <div className="flex items-center justify-between px-5 py-4 border-b">
           <div className="flex items-center space-x-2">
-            <img src="/logo.png" alt="logo" className="h-10 w-10 object-contain" />
-            <span className="text-xl font-bold text-blue-800">Margam Group</span>
+            <img src="/logo.png" alt="logo" className="h-16 w-24 object-contain" />
           </div>
 
           <IoCloseSharp

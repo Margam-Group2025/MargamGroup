@@ -168,7 +168,7 @@ const AgriculturePage = () => {
       </section>
   
       {/* 6. Gallery Section */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 bg-white">
+      {/* <section className="py-20 px-4 md:px-8 lg:px-16 bg-white">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-green-900 mb-12 text-center">Farm & Field Gallery</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -180,7 +180,7 @@ const AgriculturePage = () => {
             <img src="https://images.unsplash.com/photo-1587502537750-f8f9e6d302a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Farm Gallery 6" className="rounded-lg shadow-md w-full h-60 object-cover transform hover:scale-105 transition-transform duration-300" />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 7. CSR / Community Agricultural Initiatives Section */}
       <section className="py-20 px-4 md:px-8 lg:px-16 bg-green-100">
