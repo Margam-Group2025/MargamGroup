@@ -199,7 +199,7 @@ export default function HomePage() {
                   Discover Our Vision
                 </button>
               </Link>
-              <Link to="/contact">
+              <Link to="/contactus">
                 <button className="h-14 px-8 border border-white text-white">
                   Partner With Us
                 </button>
