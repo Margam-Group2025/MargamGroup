@@ -10,8 +10,8 @@ const CareerPage = () => {
     jobRole: '',
     resume: null
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(true);
+  const [submitSuccess, setSubmitSuccess] = useState(true);
 
   const jobOpenings = [
     {

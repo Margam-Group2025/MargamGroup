@@ -161,7 +161,7 @@ const Contact = () => {
             <MapPin size={30} /> Our Location
           </h2>
           <p className="text-gray-600 mt-2 leading-relaxed">
-            Margam Nirman,3rd Floor,C/o-Hdfc bank <br />Jaydev Vihar, Bhubaneswar <br />odisha 751013
+            Margam Group,2rd Floor,C/o-Hdfc bank <br />Jaydev Vihar, Bhubaneswar <br />odisha 751013
           </p>
         </div>
 
